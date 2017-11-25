@@ -4,16 +4,29 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px;
   grid-column-gap: 20px;
+  /*grid-template-columns: 0.5fr 1fr 0.5fr;*/
+}
+.img-overlay {
+    position: relative;
+    max-width: 500px; 
+    
 }
 
-
-#grid-button {
-  display: grid;
-  height: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 30x;
-  grid-column-gap: 20px;
-}
+/*
+.overlay {
+    position: absolute;
+    display: block;
+    display: grid;
+    width: 15%;
+    height: 50%;
+    top: 15%;
+    left: 5px;
+    right: 50%;
+    bottom: 0;
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+}*/
 
 img {
     max-height: 100%;
@@ -22,5 +35,4 @@ img {
 #grid > div {
   background-color: gray;
 }
-
 

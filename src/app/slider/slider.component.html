@@ -1,7 +1,12 @@
-<button [style]="display-left" (click)="moveLeft()">&#10094;</button>
-<button [style]="display-right" (click)="moveRight()">&#10095;</button>
+<button style="float:left" (click)="moveLeft()">&#10094;</button>
+
+<button style="float:right" (click)="moveRight()">&#10095;</button>
 
 <div id="grid">
-  <img [@move]="state" (@move.start)="onStart($event)" (@move.done)="onFinish($event)" [attr.item]="i" [class]="image-slider"
-    *ngFor="let url of imageUrls; let i = index" [src]="url" alt="" />
+  <img *ngFor="let url of imageUrls; let i = index"
+    [@move]="state" 
+    (@move.done)="onFinish($event)" 
+    [attr.class]="i" 
+    [class]="image-slider" 
+    [src]="url" alt=""/>
 </div>
