@@ -1,27 +1,30 @@
-# AngularImageSlider
+# Angular Image Slider
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+This project is my tiny attempt to publish my first node package. I may not continue to support this package. But lets see. 
 
-## Development server
+# Github
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+https://github.com/saadbinamjad/angular-image-slider
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Package: 
+https://www.npmjs.com/package/angular-image-slider
 
-## Build
+# Install:
+npm install command: npm i angular-image-slider --save-dev
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+# Usage:
 
-## Running unit tests
+1. Import BrowserAnimationsModule
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+	import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-## Running end-to-end tests
+2. Import SliderModule
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+	import { SliderModule } from 'angular-image-slider';
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2. And then pass any array with image url only as input:
+    eg:
+        <app-slider [images]="imagesUrl"></app-slider>
+   where imagesUrl can be like :
+     imagesUrl = ['image url 1', 'image url 2', ...];
