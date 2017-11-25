@@ -1,0 +1,26 @@
+#grid {
+  display: grid;
+  height: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 300px;
+  grid-column-gap: 20px;
+}
+
+
+#grid-button {
+  display: grid;
+  height: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 30x;
+  grid-column-gap: 20px;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+#grid > div {
+  background-color: gray;
+}
+
+
