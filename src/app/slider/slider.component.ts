@@ -48,23 +48,17 @@ export class SliderComponent implements OnInit {
   }
 
   moveLeft() {
-    this.state = 'left';
-    this.imageRotate(this.imageUrls, false)
+    this.state = 'right';
+    this.imageRotate(this.imageUrls, true)
   }
 
   moveRight() {
-    this.state = 'right';
-    this.imageRotate(this.imageUrls, true)
+    this.state = 'left';
+    this.imageRotate(this.imageUrls, false)
   }
 
   onFinish($event) {
     this.state = 'void';
   }
-
-  // If any start hooks are required
-  // template: (@move.start)="onStart($event)" 
-  // onStart($event) {
-  //   //No call
-  // }
 
 }
