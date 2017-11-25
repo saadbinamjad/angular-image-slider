@@ -4,35 +4,63 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px;
   grid-column-gap: 20px;
-  /*grid-template-columns: 0.5fr 1fr 0.5fr;*/
-}
-.img-overlay {
-    position: relative;
-    max-width: 500px; 
-    
 }
 
-/*
-.overlay {
+.overlay-left {
     position: absolute;
-    display: block;
+    display: inline-block;
     display: grid;
-    width: 15%;
+    width: 7rem;
     height: 50%;
-    top: 15%;
-    left: 5px;
-    right: 50%;
+    top: 0%;
+    left: 0;
     bottom: 0;
     background-color: white;
     z-index: 1;
     cursor: pointer;
-}*/
-
-img {
-    max-height: 100%;
-    max-width: 100%;
 }
+
+.overlay-right {
+    position: absolute;
+    display: inline-block;
+    display: grid;
+    width: 7rem;
+    height: 50%;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+}
+
 #grid > div {
   background-color: gray;
 }
 
+#slider-buttons {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 70%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background: white;
+}
+
+
+.image-cropper {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-cropper img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
