@@ -2,7 +2,7 @@
 
 This project is my tiny attempt to publish my first node package. I may not continue to support this package. But lets see. 
 
-# Github
+# Github:
 
 https://github.com/saadbinamjad/angular-image-slider
 
@@ -11,7 +11,7 @@ https://github.com/saadbinamjad/angular-image-slider
 https://www.npmjs.com/package/angular-image-slider
 
 # Install:
-npm install command: npm i angular-image-slider --save-dev
+npm install command: npm i angular-image-slider --save
 
 # Usage:
 
