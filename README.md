@@ -61,7 +61,6 @@ To install this module to an external project, follow the procedure:
     }
     }
     ```
-    
 
 2.  Use the array as an input in the component. 'images' is the name of the input for the slider component:
 
