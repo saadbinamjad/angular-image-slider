@@ -1,14 +1,16 @@
-<div class="overlay-left"></div>
-<div class="overlay-right"></div>
-<div id="grid" class="image-cropper">
-  <img 
-  [@move]="state" 
-  (@move.done)="onFinish($event)" 
-  [attr.class]="i" 
-  *ngFor="let url of imageUrls; let i = index"
-  [src]="url" alt="" />
-</div>
-<div>
-  <a id="slider-buttons-left" (click)="moveLeft()">&#10094;</a>
-  <a id="slider-buttons-right" (click)="moveRight()">&#10095;</a>
+<div id="container">
+  <div class="overlay-left"></div>
+  <div class="overlay-right"></div>
+  <div id="grid" class="image-cropper">
+    <img *ngFor="let url of imageUrls; let i = index" 
+      [@move]="state" 
+      (@move.done)="onFinish($event)" 
+      [attr.class]="i" 
+      [src]="url"
+      alt="" />
+  </div>
+  <div>
+    <a id="slider-buttons-left" (click)="moveLeft()">&#10094;</a>
+    <a id="slider-buttons-right" (click)="moveRight()">&#10095;</a>
+  </div>
 </div>

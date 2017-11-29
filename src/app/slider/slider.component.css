@@ -1,9 +1,9 @@
-/*#container{
-   overflow-y: inherit;  
-}*/
+#container{
+   overflow-x: hidden;
+}
 #grid {
   display: grid;
-  height: 100px;
+  height: 150;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px;
   grid-column-gap: 20px;
@@ -43,8 +43,9 @@
 
 #slider-buttons-left{
    
-  position: relative;
+  position: absolute;
   z-index: 1000;
+  top: 130px;
   float: left;
   cursor: pointer;
   font-size: 250%;
@@ -55,7 +56,8 @@
 
 #slider-buttons-right{
    
-  position: relative;
+  position: absolute;
+  top: 130px;
   z-index: 1000;
   float: right;
   cursor: pointer;
