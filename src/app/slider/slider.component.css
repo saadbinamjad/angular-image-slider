@@ -1,3 +1,6 @@
+/*#container{
+   overflow-y: inherit;  
+}*/
 #grid {
   display: grid;
   height: 100px;
@@ -38,17 +41,29 @@
   background-color: gray;
 }
 
-#slider-buttons {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  z-index: 15;
-  top: 70%;
-  left: 50%;
-  margin: -100px 0 0 -150px;
-  background: white;
+#slider-buttons-left{
+   
+  position: relative;
+  z-index: 1000;
+  float: left;
+  cursor: pointer;
+  font-size: 250%;
+  color: #778899;
+  left: 60px;
+  
 }
 
+#slider-buttons-right{
+   
+  position: relative;
+  z-index: 1000;
+  float: right;
+  cursor: pointer;
+  font-size: 250%;
+  color: #778899;
+  right: 60px;
+  
+}
 
 .image-cropper {
     height: 300px;

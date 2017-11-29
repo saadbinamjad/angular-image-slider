@@ -53,6 +53,7 @@ export class SliderComponent implements OnInit {
   }
 
   moveRight() {
+    
     this.state = 'left';
     this.imageRotate(this.imageUrls, false)
   }

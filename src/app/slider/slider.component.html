@@ -8,8 +8,7 @@
   *ngFor="let url of imageUrls; let i = index"
   [src]="url" alt="" />
 </div>
-
-<div id="slider-buttons">
-  <button style="float:left; top: 50px; z-index:1000"  (click)="moveLeft()">&#10094;</button>
-  <button style="float:right;  top: 50px; z-index:1000 " (click)="moveRight()">&#10095;</button>
+<div>
+  <a id="slider-buttons-left" (click)="moveLeft()">&#10094;</a>
+  <a id="slider-buttons-right" (click)="moveRight()">&#10095;</a>
 </div>
