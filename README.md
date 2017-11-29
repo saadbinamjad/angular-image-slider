@@ -61,11 +61,12 @@ To install this module to an external project, follow the procedure:
     }
     }
     ```
+    
 
 2.  Use the array as an input in the component. 'images' is the name of the input for the slider component:
 
     ```html
-        <app-slider [images]="imagesUrl"></app-slider>
+    <app-slider [images]="imagesUrl"></app-slider>
     ```
 ## Demo
 Online demo is [here](https://saadbinamjad.github.io/angular-image-slider/)
