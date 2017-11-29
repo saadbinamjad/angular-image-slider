@@ -80,8 +80,9 @@ https://www.npmjs.com/package/angular-image-slider
 * Author: saadbinamjad
 
 ## Keywords
+* Angular
 * Angular2
-* Angular4
+* Angular 2+
 * Image Slider
 * Carousel
 * Slider 
