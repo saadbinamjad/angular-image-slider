@@ -14,59 +14,59 @@ To install this module to an external project, follow the procedure:
 2. Add __SliderModule__ and __BrowserAnimationsModule__ import to your __@NgModule__ like example below. 
   
     ```ts
-        import { BrowserModule } from '@angular/platform-browser';
-        import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-        import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+    import { NgModule } from '@angular/core';
 
-        import { AppComponent } from './app.component';
-        import { SliderModule } from './slider/slider.module';
+    import { AppComponent } from './app.component';
+    import { SliderModule } from './slider/slider.module';
 
 
-        @NgModule({
-        declarations: [
-            AppComponent
-        ],
-        imports: [
-            BrowserModule,
-            BrowserAnimationsModule,
-            SliderModule
-        ],
-        providers: [],
-        bootstrap: [AppComponent]
-        })
-        export class AppModule { }
+    @NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        SliderModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+    })
+    export class AppModule { }
     ```
 ## Usage
 
-1.   You just need to construct a simple array containing image styleUrls
+1.   You just need to construct a simple array containing image urls.
 
-```ts
-import { Component } from '@angular/core';
+    ```ts
+    import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
+    @Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+    })
+    export class AppComponent {
 
-  public imagesUrl;
+    public imagesUrl;
 
-  ngOnInit() {
-    this.imagesUrl = [
-      'http://www.telegraph.co.uk/content/dam/motoring2/2015/12/07/01-Kia-Sportage-front-xlarge_trans_NvBQzQNjv4BqrWYeUU_H0zBKyvljOo6zlkYMapKPjdhyLnv9ax6_too.jpg',
-      'http://www.telegraph.co.uk/cars/images/2017/01/24/A5-Sportback-main-xlarge_trans_NvBQzQNjv4BqZR6q1BRVjLLZ5nciTmZ6ABYYy2HF4Csw_oYIEcbI_AA.jpg',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPopqXeuO7fqot51N7vaZuh9EqBYgZkLexcmQ_A0Fy0CjjW6J'
-    ];
-  }
-}
-```
+    ngOnInit() {
+        this.imagesUrl = [
+        'http://www.telegraph.co.uk/content/dam/motoring2/2015/12/07/01-Kia-Sportage-front-xlarge_trans_NvBQzQNjv4BqrWYeUU_H0zBKyvljOo6zlkYMapKPjdhyLnv9ax6_too.jpg',
+        'http://www.telegraph.co.uk/cars/images/2017/01/24/A5-Sportback-main-xlarge_trans_NvBQzQNjv4BqZR6q1BRVjLLZ5nciTmZ6ABYYy2HF4Csw_oYIEcbI_AA.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPopqXeuO7fqot51N7vaZuh9EqBYgZkLexcmQ_A0Fy0CjjW6J'
+        ];
+    }
+    }
+    ```
 
-2. Use the array as an input in the component. 'images' is the name of the input for the slider component:
+2.  Use the array as an input in the component. 'images' is the name of the input for the slider component:
 
-```html
-    <app-slider [images]="imagesUrl"></app-slider>
-```
+    ```html
+        <app-slider [images]="imagesUrl"></app-slider>
+    ```
 ## Demo
 Online demo is [here](https://saadbinamjad.github.io/angular-image-slider/)
 
