@@ -3,7 +3,7 @@ import { Input } from '@angular/core';
 import { animate, state, style, transition, trigger, keyframes } from '@angular/animations';
 
 @Component({
-  selector: 'app-slider',
+  selector: 'angular-image-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css'],
   animations: [

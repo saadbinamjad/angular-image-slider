@@ -65,10 +65,13 @@ To install this module to an external project, follow the procedure:
 2.  Use the array as an input in the component. 'images' is the name of the input for the slider component:
 
     ```html
-    <app-slider [images]="imagesUrl"></app-slider>
+    <angular-image-slider [images]="imagesUrl"></angular-image-slider>
     ```
 ## Demo
 Online demo is [here](https://saadbinamjad.github.io/angular-image-slider/)
+
+## Github: 
+https://github.com/saadbinamjad/angular-image-slider
 
 ## Package: 
 https://www.npmjs.com/package/angular-image-slider
