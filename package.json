@@ -2,7 +2,7 @@
   "name": "angular-image-slider",
   "version": "0.0.4",
   "keywords": ["Angular", "Angular2+", "Image Slider", "Carousel"],
-  "author": "",
+  "author": "saadbinamjad",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
