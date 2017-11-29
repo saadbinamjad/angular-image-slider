@@ -38,10 +38,9 @@ To install this module to an external project, follow the procedure:
     ```
 ## Usage
 
-1.   You just need to construct a simple array containing image urls.
+1. You just need to construct a simple array containing image urls.
 
     ```ts
-
     import { Component } from '@angular/core';
 
     @Component({
@@ -55,13 +54,12 @@ To install this module to an external project, follow the procedure:
 
     ngOnInit() {
         this.imagesUrl = [
-        'http://www.telegraph.co.uk/content/dam/motoring2/2015/12/07/01-Kia-Sportage-front-xlarge_trans_NvBQzQNjv4BqrWYeUU_H0zBKyvljOo6zlkYMapKPjdhyLnv9ax6_too.jpg',
-        'http://www.telegraph.co.uk/cars/images/2017/01/24/A5-Sportback-main-xlarge_trans_NvBQzQNjv4BqZR6q1BRVjLLZ5nciTmZ6ABYYy2HF4Csw_oYIEcbI_AA.jpg',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPopqXeuO7fqot51N7vaZuh9EqBYgZkLexcmQ_A0Fy0CjjW6J'
+        'IMAGE_URL1.jpg',
+        'IMAGE_URL2.jpg',
+        'IMAGE_URL3.jpg',
         ];
     }
     }
-    
     ```
 
 2.  Use the array as an input in the component. 'images' is the name of the input for the slider component:
