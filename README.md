@@ -19,7 +19,7 @@ To install this module to an external project, follow the procedure:
     import { NgModule } from '@angular/core';
 
     import { AppComponent } from './app.component';
-    import { SliderModule } from './slider/slider.module';
+    import { SliderModule } from 'angular-image-slider';
 
 
     @NgModule({
