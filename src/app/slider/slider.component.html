@@ -5,6 +5,7 @@
     <img *ngFor="let url of imageUrls; let i = index" 
       [@move]="state" 
       (@move.done)="onFinish($event)" 
+      (@move.start)="onStart($event)" 
       [attr.class]="i" 
       [src]="url"
       alt="" />

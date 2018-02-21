@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { animate, state, style, transition, trigger, keyframes } from '@angular/animations';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+  keyframes
+} from '@angular/animations';
 
 @Component({
   selector: 'angular-image-slider',
@@ -27,39 +34,46 @@ import { animate, state, style, transition, trigger, keyframes } from '@angular/
   ]
 })
 export class SliderComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   @Input() images: [any];
 
   public imageUrls: any;
   public state = 'void';
+  public disableSliderButtons: boolean = false;
 
   ngOnInit() {
     this.imageUrls = this.images;
   }
 
   imageRotate(arr, reverse) {
-    if (reverse)
-      arr.unshift(arr.pop())
-    else
-      arr.push(arr.shift())
+    if (reverse) arr.unshift(arr.pop());
+    else arr.push(arr.shift());
     return arr;
   }
 
   moveLeft() {
+    if (this.disableSliderButtons) {
+      return;
+    }
     this.state = 'right';
-    this.imageRotate(this.imageUrls, true)
+    this.imageRotate(this.imageUrls, true);
   }
 
   moveRight() {
-    
+    if (this.disableSliderButtons) {
+      return;
+    }
     this.state = 'left';
-    this.imageRotate(this.imageUrls, false)
+    this.imageRotate(this.imageUrls, false);
   }
 
   onFinish($event) {
     this.state = 'void';
+    this.disableSliderButtons = false;
   }
 
+  onStart($event) {
+    this.disableSliderButtons = true;
+  }
 }
