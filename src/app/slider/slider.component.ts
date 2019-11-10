@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription, interval } from 'rxjs';
 import { Input } from '@angular/core';
 import {
   animate,
@@ -34,21 +35,33 @@ import {
   ]
 })
 export class SliderComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   @Input() images: [any];
+  @Input() autoRotate = false;
+  @Input() autoRotateAfter = 5000;
+  @Input() autoRotateRight = true;
 
   public imageUrls: any;
   public state = 'void';
-  public disableSliderButtons: boolean = false;
+  public disableSliderButtons = false;
+  subscription: Subscription;
 
   ngOnInit() {
     this.imageUrls = this.images;
+    if (this.autoRotate) {
+      const source = interval(this.autoRotateAfter);
+      this.subscription = source.subscribe(() =>
+        (this.autoRotateRight) ? this.moveLeft() : this.moveRight());
+    }
   }
 
   imageRotate(arr, reverse) {
-    if (reverse) arr.unshift(arr.pop());
-    else arr.push(arr.shift());
+    if (reverse) {
+      arr.unshift(arr.pop());
+    } else {
+      arr.push(arr.shift());
+    }
     return arr;
   }
 
