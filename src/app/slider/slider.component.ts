@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SecurityContext } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Input } from '@angular/core';
 import {
   animate,
@@ -35,20 +36,30 @@ import {
   ]
 })
 export class SliderComponent implements OnInit {
-  constructor() { }
 
   @Input() images: [any];
   @Input() autoRotate = false;
   @Input() autoRotateAfter = 5000;
   @Input() autoRotateRight = true;
 
+  public safeUrls = [];
   public imageUrls: any;
   public state = 'void';
   public disableSliderButtons = false;
   subscription: Subscription;
 
+  constructor(private sanitizer: DomSanitizer) {
+  }
+
   ngOnInit() {
-    this.imageUrls = this.images;
+
+    this.images.forEach(element => {
+      const safeUrl = this.sanitizer.sanitize(SecurityContext.URL, element);
+      this.safeUrls.push(safeUrl);
+    });
+
+    this.imageUrls = this.safeUrls;
+
     if (this.autoRotate) {
       const source = interval(this.autoRotateAfter);
       this.subscription = source.subscribe(() =>
