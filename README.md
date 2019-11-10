@@ -4,7 +4,7 @@
 
 ## Description
 
-This project is my tiny attempt to publish my first node package. I may not continue to support this package. But lets see!
+This project is my tiny attempt to publish my first node package. I may not continue to support this package. But lets see! Let me know, if you want to have new features. Thanks.
 
 ## Installation
 
