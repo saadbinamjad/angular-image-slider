@@ -41,6 +41,7 @@ export class SliderComponent implements OnInit {
   @Input() autoRotate = false;
   @Input() autoRotateAfter = 5000;
   @Input() autoRotateRight = true;
+  @Input() imagesToBeDisplayedByDefault = 3;
 
   public safeUrls = [];
   public imageUrls: any;
@@ -99,5 +100,12 @@ export class SliderComponent implements OnInit {
 
   onStart($event) {
     this.disableSliderButtons = true;
+  }
+
+  getNumberOfImagesToBeDisplayed() {
+    return {
+      display: 'grid',
+      'grid-template-columns': `repeat(${this.imagesToBeDisplayedByDefault}, 1fr)`,
+    };
   }
 }

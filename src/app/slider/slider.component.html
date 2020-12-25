@@ -1,12 +1,12 @@
 <div id="container">
   <div class="overlay-left"></div>
   <div class="overlay-right"></div>
-  <div id="grid" class="image-cropper">
-    <img *ngFor="let url of imageUrls; let i = index" 
-      [@move]="state" 
-      (@move.done)="onFinish($event)" 
-      (@move.start)="onStart($event)" 
-      [attr.class]="i" 
+  <div id="grid" [ngStyle]="getNumberOfImagesToBeDisplayed()" class="image-cropper">
+    <img *ngFor="let url of imageUrls; let i = index"
+      [@move]="state"
+      (@move.done)="onFinish($event)"
+      (@move.start)="onStart($event)"
+      [attr.class]="i"
       [src]="url"
       alt="" />
   </div>
