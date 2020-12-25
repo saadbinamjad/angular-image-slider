@@ -15,45 +15,39 @@ To install this module to an external project, follow the procedure:
 2. Add **SliderModule** and **BrowserAnimationsModule** import to your **@NgModule** like example below.
 
    ```ts
-   import { BrowserModule } from '@angular/platform-browser';
-   import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-   import { NgModule } from '@angular/core';
+   import { BrowserModule } from "@angular/platform-browser";
+   import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+   import { NgModule } from "@angular/core";
 
-   import { AppComponent } from './app.component';
-   import { SliderModule } from 'angular-image-slider';
-  
+   import { AppComponent } from "./app.component";
+   import { SliderModule } from "angular-image-slider";
+
    @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        SliderModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-    })
-    export class AppModule { }
-    ```
+     declarations: [AppComponent],
+     imports: [BrowserModule, BrowserAnimationsModule, SliderModule],
+     providers: [],
+     bootstrap: [AppComponent],
+   })
+   export class AppModule {}
+   ```
 
 ## Usage
 
 1. You just need to construct a simple array containing image urls.
 
    ```ts
-   import { Component } from '@angular/core';
+   import { Component } from "@angular/core";
 
    @Component({
-     selector: 'app-root',
-     templateUrl: './app.component.html',
-     styleUrls: ['./app.component.css']
+     selector: "app-root",
+     templateUrl: "./app.component.html",
+     styleUrls: ["./app.component.css"],
    })
    export class AppComponent {
      public imagesUrl;
 
      ngOnInit() {
-       this.imagesUrl = ['IMAGE_URL1.jpg', 'IMAGE_URL2.jpg', 'IMAGE_URL3.jpg'];
+       this.imagesUrl = ["IMAGE_URL1.jpg", "IMAGE_URL2.jpg", "IMAGE_URL3.jpg"];
      }
    }
    ```
@@ -64,13 +58,14 @@ To install this module to an external project, follow the procedure:
    <angular-image-slider [images]="imagesUrl"></angular-image-slider>
    ```
 
-3. You can configure the slider to auto rotate. You can also decide the autoRotate speed and the direction.
+3. You can configure the slider to auto rotate. You can also decide the autoRotate speed and the direction, as well as number of images that is displayed initially by default.
 
    ```html
    <angular-image-slider
      [autoRotate]="true"
      [autoRotateAfter]="5000"
      [autoRotateRight]="true"
+     [imagesToBeDisplayedByDefault]="5"
      [images]="imagesUrl"
    ></angular-image-slider>
    ```

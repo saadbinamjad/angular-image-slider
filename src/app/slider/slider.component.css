@@ -1,49 +1,47 @@
-#container{
-   position: relative;
-   overflow-x: hidden;
+#container {
+  position: relative;
+  overflow-x: hidden;
 }
 #grid {
   display: grid;
   height: 150;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px;
   grid-column-gap: 20px;
 }
 
 .overlay-left {
-    position: absolute;
-    display: inline-block;
-    display: grid;
-    width: 7rem;
-    height: 100%;
-    top: 0%;
-    left: 0;
-    bottom: 0;
-    background-color: white;
-    z-index: 1;
-    cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  display: grid;
+  width: 7rem;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .overlay-right {
-    position: absolute;
-    display: inline-block;
-    display: grid;
-    width: 7rem;
-    height: 100%;
-    top: 0%;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    z-index: 1;
-    cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  display: grid;
+  width: 7rem;
+  height: 100%;
+  top: 0%;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1;
+  cursor: pointer;
 }
 
 #grid > div {
   background-color: gray;
 }
 
-#slider-buttons-left{
-   
+#slider-buttons-left {
   position: absolute;
   z-index: 1000;
   top: 130px;
@@ -52,11 +50,9 @@
   font-size: 250%;
   color: #778899;
   left: 60px;
-  
 }
 
-#slider-buttons-right{
-   
+#slider-buttons-right {
   position: absolute;
   top: 130px;
   z-index: 1000;
@@ -65,20 +61,19 @@
   font-size: 250%;
   color: #778899;
   right: 60px;
-  
 }
 
 .image-cropper {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-cropper img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
 }
